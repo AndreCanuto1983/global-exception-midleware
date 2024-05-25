@@ -12,7 +12,7 @@ namespace global_exception_midleware.Configurations
             Exception exception,
             CancellationToken cancellationToken)
         {
-            _logger.LogError(exception, "[GlobalExceptionHandler] -> Exception: {Ex}", exception.Message);
+            _logger.LogError("[GlobalExceptionHandler][TryHandleAsync] -> Exception: {Ex}", exception.Message);
 
             var problemDetails = new
             {
